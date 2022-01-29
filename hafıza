@@ -1,0 +1,468 @@
+#include <stdio.h>
+#include <stdlib.h>  
+#include <conio.h>							// Hafıza Oyunu
+#include <time.h>  
+#include <locale.h> 
+#include <time.h>
+#include <windows.h>
+
+	int yerHafiza,siracounterHafiza,buyuklukHafiza,sayacHafiza,kontrolHafiza,cevapHafiza;
+	int cevap1Hafiza,cevap2Hafiza,cevap3Hafiza,cevap4Hafiza,cevap5Hafiza,cevap6Hafiza,cevap7Hafiza,cevap8Hafiza,cevap9Hafiza;
+	int cevap10Hafiza,cevap11Hafiza,cevap12Hafiza,cevap13Hafiza,cevap14Hafiza,cevap15Hafiza,cevap16Hafiza,cevap17Hafiza,cevap18Hafiza,cevap19Hafiza,cevap20Hafiza;
+	
+int oyunalani(){
+	
+
+	setlocale(LC_ALL, "Turkish");
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t  ***Başarılar***\n\n\n\t\t\tA=1  B=2  C=3  D=4  E=5");
+	printf("\n\n\t\t\t   A  B  C  D  E");
+	printf("\n\t\t\t  _______________\n");
+	
+}
+
+int	sutunbelirleme(){
+	
+	
+	
+	if(buyuklukHafiza==1){
+		printf("\n\n\n\n\n\n\n\t\t\t   A  B  C  D  E");
+		printf("\n\t\t\t  _______________");
+		if(yerHafiza==1){ 
+			printf("\n\t\t\t%d |\\/|  |  |  |  |\n\t\t\t  |/\\|__|__|__|__|",buyuklukHafiza); 
+			
+		}
+		
+		else if(yerHafiza==2){
+			printf("\n\t\t\t%d |  |\\/|  |  |  |\n\t\t\t  |__|/\\|__|__|__|",buyuklukHafiza); 
+			
+		}	
+
+		else if(yerHafiza==3){
+			printf("\n\t\t\t%d |  |  |\\/|  |  |\n\t\t\t  |__|__|/\\|__|__|",buyuklukHafiza); 
+			
+		}	
+
+		else if(yerHafiza==4){
+			printf("\n\t\t\t%d |  |  |  |\\/|  |\n\t\t\t  |__|__|__|/\\|__|",buyuklukHafiza); 
+			
+		}	
+
+		else if(yerHafiza==5){
+			printf("\n\t\t\t%d |  |  |  |  |\\/|\n\t\t\t  |__|__|__|__|/\\|",buyuklukHafiza); 
+				
+		}
+	}	
+	else if(buyuklukHafiza<21){
+	
+		if(yerHafiza==1){
+	
+			if(buyuklukHafiza>=10) 
+				printf("\n\t\t\t%d|\\/|  |  |  |  |\n\t\t\t  |/\\|__|__|__|__|",buyuklukHafiza); 
+			else if(buyuklukHafiza==9) 
+				printf("\n\t\t\t%d |\\/|  |  |  |  |\n\t\t\t  |/\\|__|__|__|__|\t\t\t\t\t%d saniyeniz kaldı",buyuklukHafiza,sayacHafiza); 
+
+	    	else 
+				printf("\n\t\t\t%d |\\/|  |  |  |  |\n\t\t\t  |/\\|__|__|__|__|",buyuklukHafiza);
+			
+		}
+		
+		if(yerHafiza==2){
+			if(buyuklukHafiza>=10) 
+				printf("\n\t\t\t%d|  |\\/|  |  |  |\n\t\t\t  |__|/\\|__|__|__|",buyuklukHafiza); 
+			else if(buyuklukHafiza==9) 
+				printf("\n\t\t\t%d |  |\\/|  |  |  |\n\t\t\t  |__|/\\|__|__|__|\t\t\t\t\t%d saniyeniz kaldı",buyuklukHafiza,sayacHafiza); 
+
+	    	else
+				printf("\n\t\t\t%d |  |\\/|  |  |  |\n\t\t\t  |__|/\\|__|__|__|",buyuklukHafiza);
+		}	
+
+		if(yerHafiza==3){
+			if(buyuklukHafiza>=10) 
+				printf("\n\t\t\t%d|  |  |\\/|  |  |\n\t\t\t  |__|__|/\\|__|__|",buyuklukHafiza); 
+			else if(buyuklukHafiza==9) 
+				printf("\n\t\t\t%d |  |  |\\/|  |  |\n\t\t\t  |__|__|/\\|__|__|\t\t\t\t\t%d saniyeniz kaldı",buyuklukHafiza,sayacHafiza); 
+	    	else 
+				printf("\n\t\t\t%d |  |  |\\/|  |  |\n\t\t\t  |__|__|/\\|__|__|",buyuklukHafiza);
+		}	
+
+		if(yerHafiza==4){
+			if(buyuklukHafiza>=10) 
+				printf("\n\t\t\t%d|  |  |  |\\/|  |\n\t\t\t  |__|__|__|/\\|__|",buyuklukHafiza); 
+			else if(buyuklukHafiza==9) 
+				printf("\n\t\t\t%d |  |  |  |\\/|  |\n\t\t\t  |__|__|__|/\\|__|\t\t\t\t\t%d saniyeniz kaldı",buyuklukHafiza,sayacHafiza); 
+	    	else 
+				printf("\n\t\t\t%d |  |  |  |\\/|  |\n\t\t\t  |__|__|__|/\\|__|",buyuklukHafiza);	
+		}	
+
+		if(yerHafiza==5){
+			if(buyuklukHafiza>=10) 
+				printf("\n\t\t\t%d|  |  |  |  |\\/|\n\t\t\t  |__|__|__|__|/\\|",buyuklukHafiza); 
+			else if(buyuklukHafiza==9) 
+				printf("\n\t\t\t%d |  |  |  |  |\\/|\n\t\t\t  |__|__|__|__|/\\|\t\t\t\t\t%d saniyeniz kaldı",buyuklukHafiza,sayacHafiza); 
+
+	    	else 
+				printf("\n\t\t\t%d |  |  |  |  |\\/|\n\t\t\t  |__|__|__|__|/\\|",buyuklukHafiza);	
+		}
+	}	
+	else return 0;
+}
+
+int ilerlenmisoyunalani(){
+	
+		if(cevapHafiza==kontrolHafiza){	/*  	Cevap doğruysa 		*/
+			if(cevapHafiza==1){ 
+				
+				oyunalani();
+				if (buyuklukHafiza>9) printf("\t\t\t%d|\\/|  |  |  |  |\n\t\t\t  |/\\|__|__|__|__|\t\t",buyuklukHafiza); 
+				else printf("\t\t\t%d |\\/|  |  |  |  |\n\t\t\t  |/\\|__|__|__|__|\t\t",buyuklukHafiza); 
+			}
+		
+			else if(cevapHafiza==2){
+				
+				oyunalani();
+				if (buyuklukHafiza>9) printf("\t\t\t%d|  |\\/|  |  |  |\n\t\t\t  |__|/\\|__|__|__|\t\t",buyuklukHafiza);
+				else printf("\t\t\t%d |  |\\/|  |  |  |\n\t\t\t  |__|/\\|__|__|__|\t\t",buyuklukHafiza); 
+			}	
+
+			else if(cevapHafiza==3){
+				oyunalani();
+				if (buyuklukHafiza>9) printf("\t\t\t%d|  |  |\\/|  |  |\n\t\t\t  |__|__|/\\|__|__|\t\t",buyuklukHafiza);
+				else printf("\t\t\t%d |  |  |\\/|  |  |\n\t\t\t  |__|__|/\\|__|__|\t\t",buyuklukHafiza); 
+			}	
+
+			else if(cevapHafiza==4){
+				oyunalani();
+				if (buyuklukHafiza>9) printf("\t\t\t%d|  |  |  |\\/|  |\n\t\t\t  |__|__|__|/\\|__|\t\t",buyuklukHafiza);
+				else printf("\t\t\t%d |  |  |  |\\/|  |\n\t\t\t  |__|__|__|/\\|__|\t\t",buyuklukHafiza); 
+			}	
+
+			else if(cevapHafiza==5){
+				oyunalani();
+				if (buyuklukHafiza>9) printf("\t\t\t%d|  |  |  |  |\\/|\n\t\t\t  |__|__|__|__|/\\|\t\t",buyuklukHafiza); 
+				else printf("\t\t\t%d |  |  |  |  |\\/|\n\t\t\t  |__|__|__|__|/\\|\t\t",buyuklukHafiza); 
+			}
+			
+	
+	}
+		else {   /* Cevap yanlışsa  */
+			printf ("\n\n\tYanlış seçim  Kaybettiniz");
+			exit (0);
+		}
+	
+		if(buyuklukHafiza==20){   /*  20/20   */
+			printf("\n\n\n\t\t\tTebrikler   Kazandınız!!");
+			exit(0);
+		}
+		
+}
+
+
+
+	
+int main(){
+	
+		srand (time(NULL));
+	setlocale(LC_ALL, "Turkish");
+	printf("\n\t\t\t****Dünyanın en iyi hafıza oyununa hoşgeldiniz****");
+	printf("\n\n\t\t\t   A  B  C  D  E");
+	printf("\n\t\t\t  _______________");
+
+
+{  /*   Her satıra özel cevapHafiza */
+
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap1Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap2Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap3Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap4Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap5Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap6Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap7Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap8Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap9Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap10Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap11Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap12Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap13Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap14Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap15Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap16Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap17Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap18Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap19Hafiza=yerHafiza;
+	
+	yerHafiza=1+rand()%5;
+	siracounterHafiza++;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap20Hafiza=yerHafiza;
+}
+		
+	/*      Geri sayım            */
+		for(sayacHafiza=30;sayacHafiza>0;sayacHafiza--){
+	buyuklukHafiza=1;
+	yerHafiza=cevap1Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	
+	yerHafiza=cevap2Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap2Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap3Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap3Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap4Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap4Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap5Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap5Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap6Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap6Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap7Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap7Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap8Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap8Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap9Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap9Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap10Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap10Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap11Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap11Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap12Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap12Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap13Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap13Hafiza=yerHafiza;
+	
+
+	yerHafiza=cevap14Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap14Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap15Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap15Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap16Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap16Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap17Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap17Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap18Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap18Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap19Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap19Hafiza=yerHafiza;
+	
+	
+	yerHafiza=cevap20Hafiza;
+	sutunbelirleme();
+	buyuklukHafiza++;
+	cevap20Hafiza=yerHafiza;
+		
+		
+		Sleep(1200);
+		
+	}
+	
+	
+	/* OYUN BAŞLIYOR          */
+	oyunalani();
+	for (buyuklukHafiza=1;buyuklukHafiza<21;buyuklukHafiza++){
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+	
+
+		scanf("%d",&cevapHafiza);
+		kontrolHafiza=cevapHafiza;
+
+		/*   yanlış cevap    */
+		while (cevapHafiza<1||cevapHafiza>5){
+		
+			scanf("%d",&cevapHafiza);
+			kontrolHafiza=cevapHafiza;
+		}
+		{   /* Her soru başında devabı değiştirir  */
+		if (buyuklukHafiza==1) cevapHafiza=cevap1Hafiza;
+		else if (buyuklukHafiza==2) cevapHafiza=cevap2Hafiza;
+		else if (buyuklukHafiza==3) cevapHafiza=cevap3Hafiza;
+		else if (buyuklukHafiza==4) cevapHafiza=cevap4Hafiza;
+		else if (buyuklukHafiza==5) cevapHafiza=cevap5Hafiza;
+		else if (buyuklukHafiza==6) cevapHafiza=cevap6Hafiza;
+		else if (buyuklukHafiza==7) cevapHafiza=cevap7Hafiza;
+		else if (buyuklukHafiza==8) cevapHafiza=cevap8Hafiza;
+		else if (buyuklukHafiza==9) cevapHafiza=cevap9Hafiza;
+		else if (buyuklukHafiza==10) cevapHafiza=cevap10Hafiza;
+		else if (buyuklukHafiza==11) cevapHafiza=cevap11Hafiza;
+		else if (buyuklukHafiza==12) cevapHafiza=cevap12Hafiza;
+		else if (buyuklukHafiza==13) cevapHafiza=cevap13Hafiza;
+		else if (buyuklukHafiza==14) cevapHafiza=cevap14Hafiza;
+		else if (buyuklukHafiza==15) cevapHafiza=cevap15Hafiza;
+		else if (buyuklukHafiza==16) cevapHafiza=cevap16Hafiza;
+		else if (buyuklukHafiza==17) cevapHafiza=cevap17Hafiza;
+		else if (buyuklukHafiza==18) cevapHafiza=cevap18Hafiza;
+		else if (buyuklukHafiza==19) cevapHafiza=cevap19Hafiza;
+		else if (buyuklukHafiza==20) cevapHafiza=cevap20Hafiza;
+}
+
+
+
+		ilerlenmisoyunalani();
+	printf("\n\n");
+
+}
+	getch();
+	return 0;
+
+}
